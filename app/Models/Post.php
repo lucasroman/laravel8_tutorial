@@ -9,8 +9,12 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+    ];
+
     public function comments()
     {
-    	return $this->hasMany(Comment::class)
+    	return $this->hasMany(Comment::class);
     }
 }
